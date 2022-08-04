@@ -1,0 +1,64 @@
+<meta charset="utf-8">
+
+<h1>Programa calcular IMC</h1>
+
+
+<script> //indice de masa corporal se calcula dividiendo el peso por la altura al cuadrado
+ 
+	function saltarlinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase) {
+		
+		document.write(frase)
+		saltarlinea();
+	}	
+
+
+	function calcularIMC(peso,altura) {
+
+		return peso / (altura * altura);
+		
+		
+	}
+		nombre = prompt("Ingrese su nombre: ")
+		pesoInformado = prompt(nombre + ", Informe su peso: ");
+		alturaInformada = prompt(nombre + ", Informe su Altura: ");
+
+		imcCalculado = calcularIMC(pesoInformado,alturaInformada);
+
+
+	imprimir(nombre + ", el IMC calculado es " + imcCalculado);
+
+
+	if (imcCalculado < 18.5) {
+
+		imprimir("El IMC calculado es de Insuficiencia ponderal, es decir debajo de lo normal");
+	}
+
+	if(imcCalculado > 18.6 && imcCalculado <= 24.9){
+
+		imprimir("El IMC calculado es de Intervalo Normal");
+	}
+
+	if (imcCalculado == 25){
+
+	imprimir("El IMC calculado es de Preobesidad");
+	}
+
+	if (imcCalculado >= 25.1 && imcCalculado <= 29.9){
+
+		imprimir("el IMC calculado es de Obesidad");
+
+		}else {
+
+			imprimir("El IMC calculado es de Obesidad");
+		}
+	
+
+
+</script>

@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+
+<h1>Programa calcular IMC</h1>
+
+
+<script> //indice de masa corporal se calcula dividiendo el peso por la altura al cuadrado
+ 
+	function saltarlinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase) {
+		
+		document.write(frase)
+		saltarlinea();
+	}	
+
+
+	function calcularIMC(peso,altura,nombre){
+
+		imc = peso / (altura * altura);
+		imprimir("El imc calculado de " + nombre + " es " + imc);
+	}
+
+	calcularIMC(85,1.71,"Franco");
+	calcularIMC(95,1.69,"Facu");
+	
+</script>
